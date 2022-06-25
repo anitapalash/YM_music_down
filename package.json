@@ -1,0 +1,14 @@
+{
+  "name": "ym_music_down",
+  "version": "1.0.0",
+  "description": "Downloader of YM music from playlists",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "KurDev",
+  "license": "ISC",
+  "dependencies": {
+    "yandex-music-api": "^0.0.3"
+  }
+}
