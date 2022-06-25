@@ -1,12 +1,6 @@
+package org.kurdev.YM_music_down.util;
 
-public class Solution {
-    public static void main(String[] args) {
-        String playlistLink = args[0];
-        String userId = getUserId(playlistLink);
-        System.out.println("User id is: " + userId);
-        String playlistId = getPlayListId(playlistLink);
-        System.out.println("Playlist id id: " + playlistId);
-    }
+public class LinkProcessorUtil {
 
     public static String getUserId(String link) {
         String userId = null;
