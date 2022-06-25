@@ -1,5 +1,6 @@
 package org.kurdev.YM_music_down.controller;
 
+import org.kurdev.YM_music_down.util.JavaScriptInterpreter;
 import org.kurdev.YM_music_down.util.LinkProcessorUtil;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,13 +17,17 @@ public class LinkController {
         String playlistId = LinkProcessorUtil.getPlayListId(playlistLink);
         System.out.println("Playlist id id: " + playlistId);
 
-        return getPlaylist(userId, playlistId);
-    }
-
-    @GetMapping("/get_playlist")
-    public ResponseEntity<String> getPlaylist(@RequestParam("user_id") String userId,
-                                              @RequestParam("playlist_id") String playlistId) {
+        JavaScriptInterpreter.getPlayListWithYandexApi(userId, playlistId);
         return null;
+
+//        return getPlaylist(userId, playlistId);
     }
+//
+//    @GetMapping("/get_playlist")
+//    public ResponseEntity<String> getPlaylist(@RequestParam("user_id") String userId,
+//                                              @RequestParam("playlist_id") String playlistId) {
+//        JavaScriptInterpreter.getPlayListWithYandexApi(userId,playlistId);
+//        return null;
+//    }
 
 }
