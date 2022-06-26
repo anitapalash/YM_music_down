@@ -30,10 +30,4 @@ public class LinkController {
 //        JavaScriptInterpreter.getPlayListWithYandexApi(userId,playlistId);
 //        return null;
 //    }
-    @GetMapping("/epta")
-    public void download(){
-        MusicDownloader musicDownloader = new MusicDownloader();
-        musicDownloader.download();
-    }
-
 }
